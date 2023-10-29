@@ -11,7 +11,7 @@ services:
   devops-project-back:
     depends_on:
       - mysqldb
-    image: rihab23/devops-project:latest
+    image: sirine20/devops-project:latest
     restart: on-failure
     ports:
       - 6868:8082
