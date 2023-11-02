@@ -17,5 +17,7 @@ services:
       - 6868:8082
     stdin_open: true
     tty: true
+volumes:
+  db_data:
 
 
