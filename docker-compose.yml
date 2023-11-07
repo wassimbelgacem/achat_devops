@@ -3,6 +3,7 @@ services:
   mysqldb:
 
     image: mysql:5.7
+    container_name: mysqldb
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ''  # Use the same password you set when running the container
