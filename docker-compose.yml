@@ -5,7 +5,7 @@ services:
     image: mysql:5.7
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD:   # Use the same password you set when running the container
+      MYSQL_ROOT_PASSWORD: ''  # Use the same password you set when running the container
       MYSQL_DATABASE: achat_db
     ports:
       - 3306:3306
