@@ -27,7 +27,12 @@ class ProduitServiceTest {
     @Test
     void whenAddProduit_thenProduitIsSaved() {
         // Arrange
-        Produit produit = /* create a Produit object for testing */;
+        Produit produit = new Produit();
+        produit.setIdProduit(1L);
+        produit.setCodeProduit("ABC123");
+        produit.setLibelleProduit("Product 1");
+        produit.setPrix(50.0f);
+        
         when(produitRepository.save(any(Produit.class))).thenAnswer(i -> i.getArguments()[0]);
 
         // Act
@@ -41,7 +46,12 @@ class ProduitServiceTest {
     void whenRetrieveProduitById_thenCorrectProduitIsReturned() {
         // Arrange
         Long produitId = 1L;
-        Produit produit = /* create a Produit object for testing */;
+        Produit produit = new Produit();
+        produit.setIdProduit(produitId);
+        produit.setCodeProduit("XYZ456");
+        produit.setLibelleProduit("Product 2");
+        produit.setPrix(75.0f);
+
         when(produitRepository.findById(produitId)).thenReturn(Optional.of(produit));
 
         // Act
@@ -51,6 +61,4 @@ class ProduitServiceTest {
         assertNotNull(foundProduit);
         assertEquals(produitId, foundProduit.getIdProduit());
     }
-
-    
 }
