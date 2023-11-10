@@ -4,7 +4,8 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import tn.esprit.rh.achat.entities.Produit;
-import tn.esprit.rh.achat.repositories.IProduitRepository;
+import tn.esprit.rh.achat.repositories.ProduitRepository;
+
 
 import java.util.Optional;
 
@@ -14,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ProduitServiceTest {
 
     @Mock
-    private IProduitRepository produitRepository;
+    private ProduitRepository produitRepository;
 
     @InjectMocks
     private ProduitServiceImpl produitService;
