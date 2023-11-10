@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import tn.esprit.rh.achat.entities.Produit;
 
 class ProduitTest {
 
